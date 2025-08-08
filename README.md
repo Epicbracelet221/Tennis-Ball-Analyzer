@@ -1,75 +1,88 @@
-Table Tennis Trainer – AI-Powered Table Tennis Ball Detection and Analytics
-Overview
-Table Tennis Trainer is an AI-driven system designed to analyze table tennis gameplay videos by detecting and tracking the ball automatically. Using computer vision techniques combined with cloud-based model inference, the system provides detailed ball position, trajectory information, and performance metrics to help players improve their skills through data-driven insights.
+🏓 Table Tennis Trainer – AI-Powered Ball Detection & Analytics
 
-Features
-Automatic frame-by-frame detection of table tennis balls in uploaded gameplay videos using the Roboflow object detection API.
+📌 Overview
+Table Tennis Trainer is an AI-powered system that detects, tracks, and analyzes table tennis balls from gameplay videos.
+By combining deep learning (via Roboflow API) and traditional computer vision techniques, it provides trajectory mapping, ball speed insights, and performance metrics — helping players improve through data-driven feedback.
 
-Traditional computer vision fallback for ball tracking via color segmentation, contour detection, and trajectory mapping.
+✨ Features
+🎯 AI-Powered Ball Detection – Frame-by-frame ball detection via Roboflow object detection API.
 
-Video overlays displaying detected ball locations, trajectories, and key metrics such as speed and spin estimation.
+🖼 Video Overlays – Bounding boxes, ball trajectories, and key metrics overlaid on gameplay footage.
 
-Modular and extensible codebase facilitating future enhancements like advanced analytics and educational content.
+🛠 Fallback CV Tracking – Color segmentation, contour detection, and trajectory mapping for robust tracking without AI.
 
-Supports analysis of personal practice or match videos to provide actionable performance feedback.
+📊 Performance Metrics – Estimated ball speed, spin (future), and control analysis.
 
-Technologies Used
-Python 3.9+
+🧩 Modular & Extensible – Easy to integrate new features such as racket tracking, shot classification, or coaching tips.
 
-OpenCV (computer vision and image processing)
+📹 Match & Practice Support – Analyze both training sessions and competitive games.
 
-Roboflow API (AI-powered object detection)
+🛠 Technologies Used
+Python 3.9+ – Core programming language
 
-NumPy and Pandas (data handling)
+OpenCV – Video processing & image analysis
 
-JSON for storing detection outputs
+Roboflow API – AI-based object detection
 
-How It Works
-Upload a video of table tennis gameplay.
+NumPy & Pandas – Data handling
 
-The system sends the video frames to the Roboflow API to detect the position of the ball in each frame.
+JSON – Storing detection results
 
-Detection results are processed locally to:
+⚙️ How It Works
+Upload Video – Input your table tennis gameplay footage.
 
-Extract ball coordinates and confidence scores.
+AI Detection – Frames are sent to the Roboflow API to detect the ball’s position.
 
-Generate an overlay video showing bounding boxes, trajectories, and metrics.
+Post-Processing – Extracts coordinates, calculates metrics, and applies trajectory smoothing.
 
-Users can review the annotated video to analyze their shots, ball control, and play style.
+Overlay Creation – Generates an annotated video showing detections, paths, and statistics.
 
-Installation
-Ensure Python 3.9 or above is installed.
+Review & Improve – Use the visual data to refine your gameplay.
 
-Install required dependencies:
+🚀 Installation
+bash
+Copy
+Edit
+# Clone the repository
+git clone https://github.com/yourusername/table-tennis-trainer.git
+cd table-tennis-trainer
 
-text
+# Install dependencies
 pip install -r requirements.txt
-Obtain a Roboflow API key and configure it in the project as needed.
+Additional Setup:
 
-Usage
-Run the main program (e.g., through the script that handles video processing and visualization).
+Get a Roboflow API Key from Roboflow.
 
-Upload your table tennis gameplay video.
+Add the API key to your config file or environment variables.
 
-Let the system process the video to produce ball tracking data.
+▶️ Usage
+bash
+Copy
+Edit
+python main.py --video path/to/input_video.avi
+Replace path/to/video.mp4 with your gameplay footage.
 
-Review the output video with overlays for performance insights.
+Processed videos will be saved in the output folder.
 
-Future Enhancements
-Integration of advanced ball spin and speed calculations calibrated to physical measurements.
+📅 Future Enhancements
+🌀 Advanced Spin & Speed Analysis calibrated with real-world physics.
 
-Expansion of shot-type detection and automated coaching suggestions.
+🏓 Shot Type Detection (e.g., forehand, backhand, smash).
 
-Addition of personalized training plans based on analytics.
+🧑‍🏫 AI Coaching Suggestions based on playing style.
 
-Capability to track players and racket movements alongside the ball.
+📍 Player & Racket Tracking for full gameplay analytics.
 
-Support for community features such as data sharing and remote coaching.
+🌐 Community Sharing & Remote Coaching features.
 
-Contribution
-Contributions to improve ball detection accuracy, add new analytic features, or enhance usability are welcome.
+🤝 Contributing
+Contributions are welcome! You can:
 
-License
+Improve detection accuracy
+
+Add new metrics & visualizations
+
+Enhance UI/UX for video review
+
+📜 License
 Specify your license here (e.g., MIT License).
-
-This README provides a clear, concise description of the Table Tennis Trainer project that highlights its core technology and functions without mentioning Streamlit to align with your preference. Let me know if you would like a version tailored for publishing with Streamlit included or more technical detail.
